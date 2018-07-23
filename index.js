@@ -68,5 +68,5 @@ bot.on('guildMemberAdd', member => {
  const channel = member.guild.channels.find('name', 'accueil');
 
  if(!channel) return;
- channel.send("Bienvenue à " + member.tag + ". Tu veux connaître les commandes > #liste-commandes . Pour savoir comment passer une commande > #comment-faire .");
+ channel.send("Bienvenue à " + member.user.tag + ". Tu veux connaître les commandes > #liste-commandes. Pour savoir comment passer une commande > #comment-faire.");
  })
