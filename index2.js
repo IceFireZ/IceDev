@@ -5,7 +5,7 @@ bot.on('ready', () => {
 	bot.user.setActivity("aider IceFireZ !", { type: 'PLAYING' })
 });
 
-bot.login('NDY5OTI1MTAwNjgzMTMyOTI4.DjO1eg.kO0X2bH_wSqdChAeueuMoPxSykE');
+bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 	if(message.channel.id === '470884370773966859'){
