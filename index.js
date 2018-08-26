@@ -11,7 +11,7 @@ bot.on('message', message => {
 	if(message.channel.id === '470884370773966859'){
 		if(message.content === "!new"){
 			var count = 0;
-			for (var i = 0; i >= message.guild.channels.length; i++) {
+			for (var i = 0; i >= message.guild.channels.size; i++) {
 				if(message.guild.channels.get(i).startsWith("commande-"+message.author.username)){
 					count++;
 				}
@@ -53,7 +53,7 @@ bot.on('message', message => {
 
 	if(message.content === "!clear"){
 		if(message.channel.name.startsWith("admin-command")){
-			for (var i = 0; i >= message.guild.channel.length; i++) {
+			for (var i = 0; i >= message.guild.channel.size; i++) {
 				if(message.guild.channel.get(i).startsWith("commande-")){
 					message.guild.channels.get(i).delete();
 				}
